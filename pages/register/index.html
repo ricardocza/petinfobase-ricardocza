@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/flex.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Petinfo - Cadastar</title>
+</head>
+<body>
+    <main class="flex flex-column gap16">
+        <header class="flex justify-space-between align-center">
+            <h2>Cadastro</h2>
+            <a href="../../index.html">
+                <button id="button-return" class="button-default">Voltar para o login</button>
+            </a>
+        </header>
+        <form action="" class="flex flex-column">
+            <div class="flex flex-column gap10">
+                <label for="user">Usuário</label>
+                <input type="text" name="user" id="user" placeholder="Digite seu usuário aqui" required>
+            </div>
+            <div class="flex flex-column gap10">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email aqui" required>
+            </div>
+            <div class="flex flex-column gap10">
+                <label for="photo">Link da foto do perfil</label>
+                <input type="photo" name="photo" id="photo" placeholder="Insira o link aqui" required>
+            </div>
+            <div class="flex flex-column gap10">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha aqui" required>
+            </div>
+            <button class="button-brand">Cadastrar</button>
+        </form>       
+        <button class="button-default">Voltar para o login</button>
+        
+    </main>
+    <aside class="flex flex-column align-center">
+        <section>
+            <h1>Petinfo</h1>
+            <h2 class="brand1">Ooooooooba!</h2>
+            <p>Agora vamos poder contribuir para o bem estar do seu pet por meio do conhecimento</p>
+        </section>
+        <div>
+            <img src="../../src/img/img-register.png" alt="">
+        </div>
+
+    </aside>
+    
+</body>
+</html>

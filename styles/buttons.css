@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+button {
+    border-radius: var(--radius-default1);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 7px;
+}
+
+.button-default {
+    border: 1px solid var(--grey600);
+    background-color: transparent;
+    color: var(--grey100);    
+}
+
+.button-brand {
+    background-color: var(--brand100);
+    color: var(--grey900);
+    border-color: var(--brand100);
+
+}
