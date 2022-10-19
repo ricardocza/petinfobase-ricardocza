@@ -1,26 +1,91 @@
 aside {
-
+    margin: 0 auto;
+    max-width: 18.75rem;    
 }
 
 aside section {
     position: absolute;
-    bottom: 0;
+    top: 2rem;    
+    max-width: 18.75rem;
+    width: 85%;
+    min-width: 14rem;
+
 }
 
-aside section img {
-    height: 100%;
+aside div img {
+    width: 100%;
 }
 
 main {
+    margin: 10rem auto 1rem;
     border: 1px solid var(--grey600);
     border-radius: var(--radius-default1);
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 1rem; 
+    max-width: 18.75rem;   
+    width: 100%;
+    gap: 1rem;
 }
 
-@media (min-width: 500px) {
+footer {
+    text-align: center;
+}
+footer > h3 {
+    font-weight: 500;
+}
+
+footer button {
+    width: 100%;
+}
+
+@media (min-width: 37.5rem) {    
     body {
         display: flex;
+        flex-direction: row-reverse;
+        gap: 2.5rem;
+        max-width: 53rem;
+    }
+    
+    main {
+        margin: unset;
+        max-width: 23rem;
+    }
+
+    aside {
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: unset;
+    }
+
+    aside section {
+        position: unset;
+        max-width: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    aside div img {
+        max-width: 18.75rem;
+    }
+    
+}
+
+@media (max-width: 20rem) {
+    body {
+        padding: unset;
+    }
+    main {
+        margin: 11rem auto 0;
+    }
+    aside section {
+        top: 0;
+    }
+
+    aside section p {
+        display: none;
     }
     
 }

@@ -6,6 +6,7 @@ button {
     font-weight: 500;
     line-height: 1.5rem;
     padding: 7px;
+    cursor: pointer;
 }
 
 .button-default {

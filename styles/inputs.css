@@ -1,0 +1,14 @@
+input {
+    background-color: var(--grey800);
+    border-radius: var(--radius-default1);
+    border: 1px solid var(--grey600);
+    height: 2.75rem;
+    padding: 0 1rem;
+    color: var(--grey100);
+    font-size: 1rem;
+    font-weight: 400;    
+}
+
+input::placeholder {
+    color: var(--grey400);
+}

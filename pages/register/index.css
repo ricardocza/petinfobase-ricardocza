@@ -1,31 +1,45 @@
 main {
-    margin: 8rem auto 1rem;
+    margin: 9rem auto 1rem;
     border: 1px solid var(--grey600);
     border-radius: var(--radius-default1);
-    padding: 1rem; 
-    max-width: 18.75rem;   
+    padding: 1rem;
+    max-width: 18.75rem;
     width: 100%;
+    gap: 1rem;
 }
 
 main form {
     gap: 0.625rem;
 }
 
+aside {
+    margin: 0 auto;
+    max-width: 18.75rem;
+}
+
 aside section {
     position: absolute;
     top: 36px;
-    margin: 0 auto;
+    max-width: 18.75rem;
     width: 85%;
     min-width: 15.6rem;
 }
 
 aside div {
-    
-    max-width: 301px;
+    max-width: 300px;
 }
 
 #button-return {
     display: none;
+
+}
+
+#button-return button {
+    font-size: 0.875rem;
+}
+
+form .button-default {
+    width: 100%;
 }
 
 @media (min-width: 37.5rem) {
@@ -34,8 +48,9 @@ aside div {
         gap: 2rem;
     }
 
-    main, aside {
-        max-width: 20rem;
+    main,
+    aside {
+        max-width: 23.125rem;
         width: 50%;
     }
 
@@ -48,34 +63,52 @@ aside div {
         gap: 1.625rem;
     }
 
-    aside div img{
+    aside {
+        gap: 1.5rem;
+
+    }
+
+    aside div img {
         width: 100%;
     }
-    
+
     aside section {
         position: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
-    
+
+    aside section h1,h2 {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    #button-return {
+        display: block;
+    }
+
 }
 
 @media (max-width: 18.75rem) {
     body {
         padding: unset;
     }
-    
+
     main {
-        margin: 9rem 0 1rem;
-        border: none;           
+        margin: 10rem 0 1rem;
+        border: none;
     }
 
     aside section {
         width: 100%;
-        min-width: unset; 
+        min-width: unset;
     }
 
-    aside div img{
+    aside div img {
         width: 100%;
-        
     }
+
+
 
 }

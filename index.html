@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/login/index.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/flex.css">
     <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="pages/login/index.css">
     <title>Petinfo - Login</title>
 </head>
 <body>
-    <aside>
-        <h1>Petinfo</h1>
-        <h2>
-            <span class="brand1">Amor</span> e <span class="brand1">carinho</span> por meio do conhecimento
-        </h2>
-        <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
-        <section>
-            <img src="src/img/img-login.jpg" alt="">
-        </section>
-    </aside>
-    <main>
+    <main class="flex flex-column">
         <h2>Login</h2>
-        <form action="none" class="flex flex-column gap32">
+        <form action="pages/register/index.html" class="flex flex-column gap32">
             <div class="flex flex-column gap16">
-                <label for="user">Usuário</label>
-                <input type="text">
+                <label class="font4" for="user">Usuário</label>
+                <input type="text" placeholder="Digite seu usuário aqui">
             </div>
             <div class="flex flex-column gap16">
-                <label for="password">Senha</label>
-                <input type="password">
+                <label class="font4" for="password">Senha</label>
+                <input type="password" placeholder="Digite sua senha aqui">
             </div>
-            <button class="button-login">Acessar</button>
+            <button class="button-brand">Acessar</button>
         </form>
-        <footer>
-            <h3>Ainda não possui conta?</h3>
-            <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
-            <a href="./pages/register/index.html"><button class="button-register">Cadastrar</button></a>
-        </footer>
-
+        <footer class="flex flex-column gap16">
+            <h3 class="font-semi5">Ainda não possui conta?</h3>
+            <p class="font5">Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+            <a href="./pages/register/index.html"><button class="button-default">Cadastrar</button></a>
+        </footer>        
     </main>
-    <script type="module" src="index.js"></script>
+    <aside>
+        <section>
+            <h1>Petinfo</h1>
+            <h2>
+                <span class="brand1">Amor</span> e <span class="brand1">carinho</span> por meio do conhecimento
+            </h2>
+            <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
+        </section>
+        <div>
+            <img src="src/img/img-login.jpg" alt="">
+        </div>
+    </aside>
+    <script type="module" src="pages/login/index.js"></script>
 </body>
 </html>
