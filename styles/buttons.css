@@ -15,9 +15,37 @@ button {
     color: var(--grey100);    
 }
 
+.button-default:hover {
+    background-color: var(--grey800);
+}
+
 .button-brand {
     background-color: var(--brand100);
     color: var(--grey900);
     border-color: var(--brand100);
+}
 
+.button-brand:hover {
+    background-color: var(--brand200)
+}
+
+.button-modal {
+    background-color: transparent;
+    border: none;
+    color: var(--brand100);   
+    width: max-content; 
+}
+
+.button-modal:hover {
+    text-decoration: underline;
+}
+
+.button-remove {
+    background-color: var(--grey600);
+    border: 1px solid var(--grey600);
+    color: var(--grey500);
+}
+
+.button-remove:hover {
+    color: var(--grey300);
 }

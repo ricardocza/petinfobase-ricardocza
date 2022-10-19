@@ -22,6 +22,10 @@
     gap: 1rem;
 }
 
+.gap20 {
+    gap: 1.25rem;
+}
+
 .gap32 {
     gap: 2rem;
 }

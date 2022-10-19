@@ -67,6 +67,11 @@ footer button {
         gap: 1.5rem;
     }
 
+    aside section h1,h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
     aside div img {
         max-width: 18.75rem;
     }
