@@ -15,16 +15,17 @@
 <body>
     <main class="flex flex-column">
         <h2>Login</h2>
-        <form action="pages/home/index.html" class="flex flex-column gap32">
+        
+        <form id="login" class="flex flex-column gap32">
             <div class="flex flex-column gap16">
                 <label class="font4" for="user">Usuário</label>
-                <input type="text" placeholder="Digite seu usuário aqui">
+                <input type="email" id="email" placeholder="Digite seu usuário aqui">
             </div>
             <div class="flex flex-column gap16">
                 <label class="font4" for="password">Senha</label>
-                <input type="password" placeholder="Digite sua senha aqui">
+                <input type="password" id="password" placeholder="Digite sua senha aqui">
             </div>
-            <button class="button-brand">Acessar</button>
+            <button type="submit" class="button-brand">Acessar</button>
         </form>
         <footer class="flex flex-column gap16">
             <h3 class="font-semi5">Ainda não possui conta?</h3>

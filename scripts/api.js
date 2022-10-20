@@ -17,4 +17,20 @@ async function loginAPI(body) {
     }
 }
 
-export {loginAPI}
+async function registerAPI(body) {
+    try {
+        const register = await fetch(`${baseURL}users/create`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+        const response = await register.json()
+        console.log(response)
+    } catch (err) {
+        console.log(err)
+    }    
+}
+
+export {loginAPI, registerAPI}

@@ -1,0 +1,10 @@
+.toast-container {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1rem;
+    animation: toastIt 2s forwards;
+}
+
+@keyframes toastIt {
+    
+}
