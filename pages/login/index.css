@@ -1,11 +1,11 @@
 aside {
     margin: 0 auto;
-    max-width: 18.75rem;    
+    max-width: 18.75rem;
 }
 
 aside section {
     position: absolute;
-    top: 2rem;    
+    top: 2rem;
     max-width: 18.75rem;
     width: 85%;
     min-width: 14rem;
@@ -20,16 +20,33 @@ main {
     margin: 10rem auto 1rem;
     border: 1px solid var(--grey600);
     border-radius: var(--radius-default1);
-    padding: 1rem; 
-    max-width: 18.75rem;   
+    padding: 1rem;
+    max-width: 18.75rem;
     width: 100%;
     gap: 1rem;
 }
 
+.login-error {
+    color: var(--alert100);
+    font-size: 0.875rem;
+    display: none;
+}
+
+.error-animation-in {
+    animation: errorLoginIn 1s ease-in-out forwards;
+    display: block;
+}
+
+.error-animation-out {
+    animation: errorLoginOut 1s ease-in-out forwards;
+}
+
+
 footer {
     text-align: center;
 }
-footer > h3 {
+
+footer>h3 {
     font-weight: 500;
 }
 
@@ -37,14 +54,14 @@ footer button {
     width: 100%;
 }
 
-@media (min-width: 37.5rem) {    
+@media (min-width: 37.5rem) {
     body {
         display: flex;
         flex-direction: row-reverse;
         gap: 2.5rem;
         max-width: 53rem;
     }
-    
+
     main {
         margin: unset;
         max-width: 23rem;
@@ -67,7 +84,8 @@ footer button {
         gap: 1.5rem;
     }
 
-    aside section h1,h2 {
+    aside section h1,
+    h2 {
         font-size: 2rem;
         font-weight: 600;
     }
@@ -75,16 +93,18 @@ footer button {
     aside div img {
         max-width: 18.75rem;
     }
-    
+
 }
 
 @media (max-width: 20rem) {
     body {
         padding: unset;
     }
+
     main {
         margin: 11rem auto 0;
     }
+
     aside section {
         top: 0;
     }
@@ -92,5 +112,30 @@ footer button {
     aside section p {
         display: none;
     }
-    
+
+}
+
+@keyframes errorLoginIn {
+    0% {
+        transform: scaleY(0);
+        display: block;
+    }
+
+    100% {
+        transform: scaleY(100%);
+        display: block;
+    }
+
+}
+
+@keyframes errorLoginOut {
+    0% {
+
+        transform: scaleY(100%);
+    }
+
+    100% {
+        transform: scaleY(0);
+        display: none;
+    }
 }

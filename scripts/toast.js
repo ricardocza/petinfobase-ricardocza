@@ -1,4 +1,8 @@
-function toast(title, message) {
+function toast(title, message, link = '') {
+    checkToast()
+    console.log('delbuguer')
+
+    
     const body = document.querySelector('body')
 
     const toastDiv = document.createElement('div')
@@ -7,24 +11,38 @@ function toast(title, message) {
     toastDiv.classList = 'toast-container'
     icon.alt = `Mensagem de ${title}`
 
-    if(title == 'Sucesso') {
-        toastDiv.classList.add('succesToast')
+    const arrTitle = title.split(' ')
+    const successText = arrTitle.find(text => text.toLowerCase() == 'sucesso!')
+    if(successText == 'sucesso!') {
+        toastDiv.classList.add('success-toast')
         icon.src = '../../src/img/succesIcon.png'
     } else {
-        toastDiv.classList.add('errorToast')
+        toastDiv.classList.add('error-toast')
         icon.src = '../../src/img/errorIcon.png'
     }
 
-    const textContainer = document.createElement('div')
+    const titleContainer = document.createElement('div')
     const h4 = document.createElement('h4')
-    const span = document.createElement('span')
-
-    h4.innerText = title
-    span.innerText = message
+    const p = document.createElement('p')
     
-    textContainer.append(h4, span)
-    toastDiv.append(icon, textContainer)
+    titleContainer.classList = 'title-container'
+    h4.innerText = title
+    p.innerText = message
+    
+    if(link != '') {
+        const homeLink = document.createElement('a')
+        homeLink.href = '../../index.html'
+        homeLink.innerText = ` ${link}`
+        p.append(homeLink)
+    }
+    titleContainer.append(icon, h4)
+    toastDiv.append(titleContainer, p)
     body.append(toastDiv)
 }
 
-export {toast}
+function checkToast() {
+    const oldToast = document.querySelector('.toast-container')
+    if(oldToast) oldToast.remove()
+}
+
+export {toast, checkToast}

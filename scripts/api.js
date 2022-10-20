@@ -1,3 +1,6 @@
+import { toast, checkToast } from "./toast.js"
+import { loginError, checkbox } from "../pages/login/index.js"
+
 const baseURL = 'http://localhost:3333/'
 
 async function loginAPI(body) {
@@ -10,10 +13,22 @@ async function loginAPI(body) {
             body: JSON.stringify(body)
         })
         const response = await login.json()
-        console.log(await response)
+        const token = JSON.stringify(response.token)
+        if(!login.ok){
+            loginError()            
+        }
+        else {
+            if(checkbox.checked) {
+                localStorage.setItem('user', token)
+            } else sessionStorage.setItem('user', token)
+            window.location.replace('./pages/home/index.html')
+        }
     } catch (err) {
         console.log(err)
-
+        toast('Algo deu errado!', 'Existe algum problema com o servidor')
+        setTimeout(() => {
+            checkToast()
+        }, 3500)
     }
 }
 
@@ -28,8 +43,20 @@ async function registerAPI(body) {
         })
         const response = await register.json()
         console.log(response)
+        if(!register.ok) {
+            toast('Oops! Algo deu errado!', `Erro: ${response.message}`)
+            setTimeout(() => {
+                checkToast()
+            }, 3500)
+        } else {
+            toast('Sua conta foi criada com sucesso!', 'Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login:', 'Acessar página de login')
+        }
     } catch (err) {
         console.log(err)
+        toast('Algo deu errado!', 'Existe algum problema com o servidor')
+        setTimeout(() => {
+            checkToast()
+        }, 3500)
     }    
 }
 

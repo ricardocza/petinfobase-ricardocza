@@ -17,5 +17,5 @@ function eventForm() {
         await registerAPI(body)
 })
 }
-toast('Sucesso', 'Olar')
+// toast('Post deletado com sucesso', 'Olar')
 eventForm()
