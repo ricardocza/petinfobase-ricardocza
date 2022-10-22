@@ -1,9 +1,7 @@
-import { loginAPI } from "../../scripts/api.js";
-export {loginError, checkbox}
+import { loginAPI } from "../../scripts/api.js"
 
-const checkbox = document.querySelector('#checkbox')
 
-function loginError() {
+export function loginError() {
     const message = document.querySelector('.login-error')
     if(message.classList.contains('error-animation-out')) {
         message.classList.remove('error-animation-out')
@@ -11,7 +9,7 @@ function loginError() {
     message.classList.add('error-animation-in')
 }
 
-function inputsListener() {
+// function inputsListener() {
     const form = document.querySelector('form')
     const formElements = [...form]
     formElements.forEach(element => {
@@ -26,10 +24,10 @@ function inputsListener() {
             })
         }
     })
-}
+// }
 
-function eventForm() {
-    const form = document.querySelector('#login')
+// function eventForm() {
+    const form1 = document.querySelector('#login')
     const elements = [...form.elements]
     form.addEventListener('submit', async (event) => {
         event.preventDefault()
@@ -41,9 +39,11 @@ function eventForm() {
             }
         })
         
-        await loginAPI(body)
+        const response = await loginAPI(body)
+        if(response.token) window.location.assign('./pages/home/home.html')
 })
-}
+// }
 
-inputsListener()
-eventForm()
+
+// inputsListener()
+// eventForm()

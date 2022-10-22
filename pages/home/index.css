@@ -27,6 +27,18 @@ main {
 
     header figure {
         position: relative;
+        
+    }
+
+    #avatar-img {
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #avatar-img img {
+        width: 100%;
     }
 
     .logout {
@@ -54,6 +66,29 @@ main {
 
     header figure:hover > .logout {        
         display: block;
+    }
+
+    ul figure {
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+    }
+    
+    ul figure img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    dialog {
+        width: 50rem;
+        border-radius: var(--radius-default2);
+        border: none;
+        margin: 0 auto;
+        position: fixed;
+        top: 20rem;
+        padding: 2rem;
     }
 }
     

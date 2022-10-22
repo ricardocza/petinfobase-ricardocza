@@ -1,4 +1,4 @@
-input {
+input, textarea {
     background-color: var(--grey800);
     border-radius: var(--radius-default1);
     border: 1px solid var(--grey600);

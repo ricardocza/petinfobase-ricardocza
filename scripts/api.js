@@ -1,9 +1,10 @@
 import { toast, checkToast } from "./toast.js"
-import { loginError, checkbox } from "../pages/login/index.js"
+import { loginError } from "../pages/login/index.js"
 
+const checkbox = document.querySelector('#checkbox')
 const baseURL = 'http://localhost:3333/'
 
-async function loginAPI(body) {
+export async function loginAPI(body) {
     try {
         const login = await fetch(`${baseURL}login`, {
             method: 'POST',
@@ -20,8 +21,10 @@ async function loginAPI(body) {
         else {
             if(checkbox.checked) {
                 localStorage.setItem('user', token)
-            } else sessionStorage.setItem('user', token)
-            window.location.replace('./pages/home/index.html')
+            } 
+            else sessionStorage.setItem('user', token)
+
+            return response
         }
     } catch (err) {
         console.log(err)
@@ -32,7 +35,7 @@ async function loginAPI(body) {
     }
 }
 
-async function registerAPI(body) {
+export async function registerAPI(body) {
     try {
         const register = await fetch(`${baseURL}users/create`, {
             method: 'POST',
@@ -60,4 +63,3 @@ async function registerAPI(body) {
     }    
 }
 
-export {loginAPI, registerAPI}

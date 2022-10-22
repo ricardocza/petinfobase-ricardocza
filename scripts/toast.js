@@ -1,7 +1,5 @@
 function toast(title, message, link = '') {
     checkToast()
-    console.log('delbuguer')
-
     
     const body = document.querySelector('body')
 
