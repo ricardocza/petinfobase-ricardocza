@@ -26,6 +26,17 @@ dialog > section  {
     display: flex;
     gap: 1rem;
 }
+.x-modal {
+    width: 2rem;
+    height: 2rem;
+    background-color: #E9ECEF;
+    border: none;
+    border-radius: var(--radius-default1);
+    color: #868E96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .post-content-modal {
     max-height: 450px;

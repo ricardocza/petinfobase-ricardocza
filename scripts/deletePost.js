@@ -30,7 +30,7 @@ export function deletePost() {
 
                     <div class="flex justify-space-between align-center">
                         <h3>Confirmação de exclusão</h3>
-                        <button class="close-modal">X</button>
+                        <button class="close-modal x-modal">X</button>
                     </div>
                     <section class="flex flex-column gap16" >
                         <h2>Tem certeza que deseja excluir este post?</h2>

@@ -58,6 +58,7 @@ function showPostListener() {
             dialog.children[0].children[0].classList.add('flex-row')
             const buttonCloseModal = document.createElement('button')
             buttonCloseModal.innerText = 'X'
+            buttonCloseModal.classList = 'x-modal'
             dialog.children[0].children[0].children[1].innerHTML=''
             dialog.children[0].children[0].children[1].append(buttonCloseModal)
             dialog.children[0].children[1].children[2].remove()

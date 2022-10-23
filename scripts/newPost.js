@@ -32,7 +32,7 @@ export function newPost() {
             <section>
                 <div class="flex justify-space-between align-center">
                     <h3>Criando novo post</h3>
-                    <button class="close-modal">X</button>
+                    <button class="close-modal x-modal">X</button>
                 </div>
                 <section id="inputs" class="flex flex-column gap20">
                     <div class="flex flex-column gap10">

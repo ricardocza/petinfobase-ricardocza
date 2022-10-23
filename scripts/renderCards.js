@@ -1,3 +1,5 @@
+const month = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembdo']
+
 async function fetchPosts(token) {
     try {
         const cards = await fetch('http://localhost:3333/posts', {
@@ -31,6 +33,10 @@ function renderCards(arrCards) {
         const {content, createdAt, title} = card
         const postId = card.id
         
+        const cardYear = createdAt.split('-')[0]
+        const cardMonth = month[createdAt.split('-')[1]-1]
+        console.log(cardMonth)
+        
         const li = document.createElement('li')
         const sectionHeader = document.createElement('section')
         const divHeaderLeft = document.createElement('div')
@@ -61,13 +67,13 @@ function renderCards(arrCards) {
         buttonRemove.classList = 'button-remove'
         
         sectionPost.classList = 'flex flex-column gap20'
-        postTitle.classList = 'title-clip'
-        postDescription.classList = 'content-clip'
+        postTitle.classList = 'title-clip font2'
+        postDescription.classList = 'content-clip font4'
         buttonModal.classList = 'button-modal'
 
         img.src = avatar
         name.innerText = username
-        date.innerText = `| ${createdAt}`
+        date.innerText = `| ${cardMonth} de ${cardYear}`
         if(loggedId === postUserId) {
             buttonEdit.innerText = 'Editar'
             buttonRemove.innerText = 'Excluir'
