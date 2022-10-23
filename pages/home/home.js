@@ -2,6 +2,7 @@ import { fetchPosts, renderCards } from "../../scripts/renderCards.js"
 import { fetchUser, renderUser } from "../../scripts/renderUser.js"
 import { newPost } from "../../scripts/newPost.js"
 import { deletePost } from "../../scripts/deletePost.js"
+import { editPost } from "../../scripts/editPost.js"
 
 async function checkToken() {
     const currentToken = localStorage.getItem('user') || sessionStorage.getItem('user') || ''
@@ -32,37 +33,42 @@ export async function updatePosts() {
     const posts = await fetchPosts(parseCurrentToken)
     renderUser(userData)
     renderCards(posts)
-    loadModals()
+    deletePost()
+    newPost()
+    showPostListener()
+    editPost()
 }
 
-export function loadModals() {
-    const modal = document.createElement('dialog')
-    
-    modal.insertAdjacentHTML('beforeend', `
-     <div class="flex justify-space-between align-center">
-        <h3>Criando novo post</h3>
-        <button id="close-modal">X</button>
-    </div>
-    <section>
-        <div class="flex">
-            <label for="title"></label>
-            <input type="text" name="title" placeholder="Digite o título aqui...">
-        </div>
-        <div>
-            <label for="content"></label>
-            <textarea name="content" id="" cols="30" rows="10"></textarea>
-        </div>
-    </section>
-    <div>
-        <button class="button-remove">Cancelar</button>
-        <button class="button-brand">Publicar</button>
-    </div>
-    `)
-    
-    deletePost(modal)
+const dialog = document.querySelector('dialog')
+dialog.addEventListener('close', () => {    
+    document.querySelector('dialog').innerHTML = ''  
+})
 
+function showPostListener() {
+    const buttons = document.querySelectorAll('.button-modal')
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const dialog = document.querySelector('dialog')
+            const currentPost = event.target.closest('li').innerHTML
+            dialog.insertAdjacentHTML('beforeend', `
+            <section class="flex flex-column gap32">
+                ${currentPost}
+            </section>
+            `)
+            dialog.children[0].children[0].classList.add('flex-row')
+            const buttonCloseModal = document.createElement('button')
+            buttonCloseModal.innerText = 'X'
+            dialog.children[0].children[0].children[1].innerHTML=''
+            dialog.children[0].children[0].children[1].append(buttonCloseModal)
+            dialog.children[0].children[1].children[2].remove()
+            dialog.children[0].children[1].classList.add('post-content')
+            dialog.showModal()
 
+            buttonCloseModal.addEventListener('click', () => {
+                dialog.close()
+            })
+        })
+    })
 }
 
-newPost()
 checkToken()

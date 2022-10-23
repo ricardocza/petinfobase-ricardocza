@@ -1,0 +1,44 @@
+dialog {
+    max-width: 60rem;
+    width: 90%;
+    border-radius: var(--radius-default2);
+    border: none;
+    margin: 0 auto;
+    position: fixed;
+    top: 10rem;
+    padding: 2rem;
+    gap: 46px;
+    max-height: 36rem;
+    overflow-y: hidden;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog > section  {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;    
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.post-content {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.confirm-remove-button {
+    background-color: var(--alert100);
+    border: none;
+    color: var(--grey900);
+}
+
+.confirm-remove-button:hover {
+    background-color: var(--alert200);
+
+}

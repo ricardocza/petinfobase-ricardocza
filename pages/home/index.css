@@ -68,7 +68,7 @@ main {
         display: block;
     }
 
-    ul figure {
+    .user-figure {
         width: 41px;
         height: 41px;
         border-radius: 50%;
@@ -76,19 +76,10 @@ main {
         display: flex;
     }
     
-    ul figure img {
+    .li-img {
         width: 100%;
         object-fit: cover;
     }
-
-    dialog {
-        width: 50rem;
-        border-radius: var(--radius-default2);
-        border: none;
-        margin: 0 auto;
-        position: fixed;
-        top: 20rem;
-        padding: 2rem;
-    }
+   
 }
     

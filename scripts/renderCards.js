@@ -52,10 +52,12 @@ function renderCards(arrCards) {
         sectionHeader.classList = 'flex align-center justify-space-between'
         divHeaderLeft.classList = 'flex align-center gap10'
         divHeaderRight.classList = 'flex gap10'
+        figure.classList = 'user-figure'
+        img.classList = 'li-img'
         name.classList = 'font-semi5'
         date.classList = 'font-semi5'
         date.style.color = '#868E96'
-        buttonEdit.classList = 'button-default'
+        buttonEdit.classList = 'button-default edit-post'
         buttonRemove.classList = 'button-remove'
         
         sectionPost.classList = 'flex flex-column gap20'

@@ -12,3 +12,15 @@ input, textarea {
 input::placeholder {
     color: var(--grey400);
 }
+
+textarea {
+  font-family: 'Inter', sans-serif; 
+  height: 120px;
+  resize: none;
+  padding-top: 0.5rem;
+}
+
+textarea::placeholder {
+    color: var(--grey400);
+
+}
