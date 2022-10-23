@@ -75,6 +75,25 @@ main {
         overflow: hidden;
         display: flex;
     }
+
+    .title-clip {
+        display: -webkit-box;
+        max-width: 50rem;
+        width: 100%;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .content-clip {
+        display: -webkit-box;
+        max-width: 50rem;
+        width: 100%;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
     
     .li-img {
         width: 100%;

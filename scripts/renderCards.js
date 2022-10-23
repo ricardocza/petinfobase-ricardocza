@@ -61,6 +61,8 @@ function renderCards(arrCards) {
         buttonRemove.classList = 'button-remove'
         
         sectionPost.classList = 'flex flex-column gap20'
+        postTitle.classList = 'title-clip'
+        postDescription.classList = 'content-clip'
         buttonModal.classList = 'button-modal'
 
         img.src = avatar

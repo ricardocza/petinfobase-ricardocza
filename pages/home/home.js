@@ -61,7 +61,9 @@ function showPostListener() {
             dialog.children[0].children[0].children[1].innerHTML=''
             dialog.children[0].children[0].children[1].append(buttonCloseModal)
             dialog.children[0].children[1].children[2].remove()
-            dialog.children[0].children[1].classList.add('post-content')
+            dialog.children[0].children[1].classList.add('post-content-modal')
+            dialog.children[0].children[1].children[0].classList.remove('title-clip')
+            dialog.children[0].children[1].children[1].classList.remove('content-clip')
             dialog.showModal()
 
             buttonCloseModal.addEventListener('click', () => {

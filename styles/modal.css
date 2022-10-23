@@ -27,7 +27,7 @@ dialog > section  {
     gap: 1rem;
 }
 
-.post-content {
+.post-content-modal {
     max-height: 450px;
     overflow-y: auto;
 }
