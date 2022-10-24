@@ -73,7 +73,4 @@ export function newPost() {
             }    
         })
     })
-
-
-
 }

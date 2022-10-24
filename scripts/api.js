@@ -5,6 +5,7 @@ const checkbox = document.querySelector('#checkbox')
 const baseURL = 'http://localhost:3333/'
 
 export async function loginAPI(body) {
+    
     try {
         const login = await fetch(`${baseURL}login`, {
             method: 'POST',
@@ -24,7 +25,7 @@ export async function loginAPI(body) {
             } 
             else sessionStorage.setItem('user', token)
 
-            return response
+            return response.token
         }
     } catch (err) {
         console.log(err)
@@ -53,6 +54,9 @@ export async function registerAPI(body) {
             }, 3500)
         } else {
             toast('Sua conta foi criada com sucesso!', 'Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login:', 'Acessar página de login')
+            setTimeout(() => {
+                window.location.assign("../../index.html")
+            }, 3500)
         }
     } catch (err) {
         console.log(err)

@@ -13,6 +13,10 @@ input::placeholder {
     color: var(--grey400);
 }
 
+.input-error {
+    border: 1px solid var(--alert100);
+}
+
 textarea {
   font-family: 'Inter', sans-serif; 
   height: 120px;

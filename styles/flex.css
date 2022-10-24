@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .gap10 {
     gap: 0.625rem;
 }

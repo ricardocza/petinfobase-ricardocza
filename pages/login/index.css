@@ -54,6 +54,13 @@ footer button {
     width: 100%;
 }
 
+.animate-spinner {
+    animation-name: spinner;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
 @media (min-width: 37.5rem) {
     body {
         display: flex;
@@ -138,4 +145,11 @@ footer button {
         transform: scaleY(0);
         display: none;
     }
+}
+
+@keyframes spinner {
+    0% {transform: rotateZ(0deg);}
+    90% {transform: rotateZ(360deg);}
+    100% {transform: rotateZ(360deg);}
+    
 }

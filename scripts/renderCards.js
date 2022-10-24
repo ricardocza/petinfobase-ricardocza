@@ -35,7 +35,6 @@ function renderCards(arrCards) {
         
         const cardYear = createdAt.split('-')[0]
         const cardMonth = month[createdAt.split('-')[1]-1]
-        console.log(cardMonth)
         
         const li = document.createElement('li')
         const sectionHeader = document.createElement('section')
@@ -55,7 +54,7 @@ function renderCards(arrCards) {
 
         li.classList = 'flex flex-column gap20'
         li.id = postId
-        sectionHeader.classList = 'flex align-center justify-space-between'
+        sectionHeader.classList = 'flex align-center justify-space-between wrap gap16'
         divHeaderLeft.classList = 'flex align-center gap10'
         divHeaderRight.classList = 'flex gap10'
         figure.classList = 'user-figure'

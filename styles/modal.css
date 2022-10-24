@@ -26,6 +26,13 @@ dialog > section  {
     display: flex;
     gap: 1rem;
 }
+
+div:has(.x-modal) {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+}
+
 .x-modal {
     width: 2rem;
     height: 2rem;
@@ -40,6 +47,8 @@ dialog > section  {
 
 .post-content-modal {
     max-height: 450px;
+    padding-right: 1rem;
+    text-align: justify;
     overflow-y: auto;
 }
 
@@ -51,5 +60,4 @@ dialog > section  {
 
 .confirm-remove-button:hover {
     background-color: var(--alert200);
-
 }

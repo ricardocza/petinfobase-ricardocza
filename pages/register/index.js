@@ -1,5 +1,4 @@
 import { registerAPI } from "../../scripts/api.js";
-import {toast} from "../../scripts/toast.js";
 
 function eventForm() {
     const form = document.querySelector('#login')
@@ -17,5 +16,4 @@ function eventForm() {
         await registerAPI(body)
 })
 }
-// toast('Post deletado com sucesso', 'Olar')
 eventForm()

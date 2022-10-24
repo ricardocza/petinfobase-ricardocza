@@ -19,10 +19,21 @@ button {
     background-color: var(--grey800);
 }
 
+.button-disabled {
+    background-color: var(--grey600);
+    border: 1px solid var(--grey600);
+    color: var(--grey500);
+    cursor: not-allowed;
+    transition: 0.2s;
+
+}
+
 .button-brand {
     background-color: var(--brand100);
+    border: 1px solid var(--brand100);
     color: var(--grey900);
     border-color: var(--brand100);
+    transition: 0.5s;
 }
 
 .button-brand:hover {
