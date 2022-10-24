@@ -18,9 +18,11 @@ export function loginError() {
             element.addEventListener('keyup', (event) => {
                 checkForm(formElements)
                 if(event.key) {
-                    // const message = document.querySelector('.login-error')
+                    const inputPassword = document.querySelector('#password')
+                    const message = document.querySelector('.login-error')
                     if(message.classList.contains('error-animation-in')) {
                         message.classList = 'login-error error-animation-out'
+                        inputPassword.classList.remove('input-error')
                     }
                 }
             })

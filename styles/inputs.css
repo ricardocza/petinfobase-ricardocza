@@ -15,6 +15,7 @@ input::placeholder {
 
 .input-error {
     border: 1px solid var(--alert100);
+    outline: 1px solid var(--alert100);
 }
 
 textarea {

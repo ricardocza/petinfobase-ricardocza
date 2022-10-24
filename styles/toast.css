@@ -32,12 +32,12 @@
 @keyframes toastIt {
     0% {
         box-shadow: 0 0 12px -8px var(--grey100);
-        right: 32px;
+        left: 32px;
         bottom: -100%;
     }
 
     50% {
-        right: 32px;
+        left: 32px;
         bottom: 24px;
     }
 
@@ -51,13 +51,13 @@
 
     80% {
         box-shadow: 0 0 12px -8px var(--grey100);
-        right: 32px;
+        left: 32px;
         bottom: 24px;
     }
 
     100% {
         box-shadow: 0 0 12px -8px var(--grey100);
-        right: 32px;
+        left: 32px;
         bottom: 24px;
     }
 }

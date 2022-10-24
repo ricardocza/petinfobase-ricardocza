@@ -1,4 +1,5 @@
 import { updatePosts } from "../pages/home/home.js"
+import { checkToast, toast } from "./toast.js"
 
 async function removePost(token, postID) {
     try {
@@ -10,8 +11,12 @@ async function removePost(token, postID) {
             },
         })
         const response = await post.json()
-        console.log(response)
-        return 'post removido com sucesso'
+        if(post.ok) {
+            toast('Post deletado com sucesso!', 'O post selecionado para exlusão foi deletado, a partir de agora não aparecerá no seu feed')
+            setTimeout(() => {checkToast()}, 3500)
+            console.log(response)
+            return 'post removido com sucesso'
+        }
     }
     catch (err) {
         console.log(err)
