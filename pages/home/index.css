@@ -41,9 +41,16 @@ header {
 }
 
 header h2 {
-    background-color: var(--grey800);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     margin-top: 4rem;
+}
+
+.bg-feed {
+    width: 100%;
+    height: 61px;
+    background-color: var(--grey800);
+    position: absolute;
+    top: 164px;
 }
 
 #button-create-post {
@@ -103,6 +110,10 @@ header h2 {
         max-width: unset;
     }
 
+    .bg-feed {
+        top: 100px;
+    }
+    
     #button-create-post {
         position: unset;
     }
